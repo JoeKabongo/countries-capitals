@@ -1,0 +1,165 @@
+/* Style the header, navigation bar */
+header{
+    width: 100%;
+    background-color: #ADD8E6;
+    padding: 1%;
+    text-align: center;
+}
+
+ a
+{
+  text-decoration: none;
+  color:#000000;
+}
+
+/*Style links in the header */
+header a{
+    text-decoration: none;
+    color: #595959;
+    margin-left: 5%;
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+
+}
+
+header a:hover{
+    background-color:  #0099ff;
+
+}
+/* style body */
+
+body{
+    background-color:  #C0C0C0;
+    margin: 0px;
+}
+
+
+/*style class continent and its links */
+.continent{
+    text-align: center;
+}
+.continent a{
+    text-decoration: none;
+    display: inline-block;
+    background-color:  #ADD8E6;
+    margin: 1%;
+    width: 10%;
+    color: #595959;
+    border-radius: 20%;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    padding: 7%;
+
+
+}
+
+.continent a:hover{
+    background-color:  #0099ff;
+
+}
+
+/* style the buttons */
+button , .link-like-btn{
+    display: inline-block;
+    width: 100px;
+    background-color: #ADD8E6;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+
+}
+button:hover, .link-like-btn:hover{
+    background-color: #0099ff;
+}
+
+
+
+form{
+    display: inline-block;
+    margin: auto;
+}
+
+
+/* style all middle class, put them in the middle of the webpage*/
+.middle{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    text-align: center;
+}
+
+.answer-choice{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ADD8E6;
+    text-align: center;
+    width: 25%;
+    margin: 1%;
+    color: #595959;
+    border-radius: 50%;
+    font-size: 45%;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    padding: 8%;
+}
+
+.answer-choice:hover{
+    background-color: #0099ff ;
+}
+
+/* Disable a link*/
+.disable {
+  pointer-events: none;
+}
+
+/* Style the right answer */
+.rightAnswer{
+    background-color : #00cc00  !important;
+}
+
+.rightAnswer::after{
+    content: " ✔";
+}
+
+
+/* Style the wrong answer*/
+.wrongAnswer{
+    background-color: #ff0000 !important;
+}
+
+.wrongAnswer::after{
+    content: " ✕";
+
+}
+table {
+    font-size: x-large;
+    margin: 6%; !important;
+}
+
+tr p{
+
+    font-family: "Yu Gothic";
+
+}
+img{
+    width: 100%;
+}
+
+#play-display
+{
+  display: none;
+}
+
+
+#result
+{
+  text-align: center;
+  display: none;
+  font-size: xx-large;
+}

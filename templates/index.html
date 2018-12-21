@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='styles.css')}}" rel='stylesheet'/>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title> Country to Capital</title>
+    <script id="question-choices" type="text/x-handlebars-template">
+    {% raw -%}
+
+      <p> <span id="question-number"> {{number}}</span>/10. Capital of <span id="country">{{country}}</span> ...</p>
+      <hr>
+      <ol type="A">
+            {{#each choices}}
+            <a> <li class="answer-choice">{{this}}</li></a>
+            {{/each}}
+
+      </ol>
+
+      <a class="link-like-btn" href="/"> Quit </a>
+      <button id="next-button" class="disable"> Next </button>
+
+
+    {%- endraw %}
+
+  </script>
+
+
+</head>
+<body>
+  <div id="home-display">
+     <header>
+         <nav  id="headerNav">
+             <h1>COUNTRY TO CAPITAL</h1>
+             <a href="{{ url_for('play', continent='Africa') }}" class="playGame">Africa</a>
+             <a href="{{ url_for('play', continent='America') }}" class="playGame">America</a>
+             <a href="{{ url_for('play', continent='Asia') }}" class="playGame">Asia</a>
+             <a href="{{ url_for('play', continent='Europe') }}" class="playGame">Europe</a>
+             <a href="{{ url_for('play', continent='Oceania') }}" class="playGame">Oceania</a>
+             <a href="{{ url_for('contact') }}"> Contact</a>
+         </nav>
+     </header>
+
+     <main>
+         <div class="continent">
+           <a href="{{ url_for('play', continent='Africa') }}" class="playGame">Africa</a>
+           <a href="{{ url_for('play', continent='America') }}" class="playGame">America</a>
+           <a href="{{ url_for('play', continent='Asia') }}" class="playGame">Asia</a>
+           <a href="{{ url_for('play', continent='Europe') }}" class="playGame">Europe</a>
+           <a href="{{ url_for('play', continent='Oceania') }}" class="playGame">Oceania</a>
+
+         </div>
+     </main>
+    </div>
+
+    <div id="play-display" style="tex-align-center;">
+      <div class="middle" id="question">
+
+      </div>
+
+      <div id="result" style="display:none; text-align:center;">
+        <h2> Your final Score </h2>
+        <hr>
+        <div id="score"> </div>
+
+        <br>
+
+        <a class="link-like-btn" href="{{ url_for('index') }}"> Done</a>
+        <a class="link-like-btn" id="playAgain-link"> Again </a>
+
+      </div>
+
+    </div>
+
+</body>

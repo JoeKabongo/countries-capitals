@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="{{ url_for('static', filename='styles.css')}}" rel='stylesheet'/>
+        <title>About me</title>
+    </head>
+    <body>
+
+      <div id="contact">
+        <hr>
+        My name is Jonathan Tshimpaka. I am Computer Science Student at Pace University.
+        Contact at  <a href="mailto:jonathankabongo23@gmail.com">jonathankabongo23@gmail.com</a>
+        <br>
+          <a class="link-like-btn" href="{{ url_for('index') }}"> Home</a>
+        <hr>
+
+    </div>
+
+      <style>
+
+          body{
+            font-family:Courier New, monospace;
+            font-size: xx-large;
+          }
+
+          #contact
+          {
+            margin-top:45vh;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+          }
+      </style>
+    </body>
+
+</html>
