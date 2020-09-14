@@ -17,8 +17,7 @@ if not os.getenv("DATABASE_URL"):
     raise RuntimeError("DATABASE_URL is not set")
 
 # Configure session to use filesystem
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://ijtfmhyfkmzalm:292081f6e539682eb3744e9c10a9e6e8120e02568e549364f3c888861d85ebb1@ec2-23-21-122-141.compute-1.amazonaws.com:5432/d4657936d27ppe"
-
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
